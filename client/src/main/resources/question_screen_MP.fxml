@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="900.0" prefWidth="1600.0" styleClass="background" stylesheets="@stylesheets/stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.QuestionControllerMP">
+   <children>
+      <Rectangle fx:id="emojiRectangle" arcHeight="25.0" arcWidth="25.0" blendMode="SRC_ATOP" fill="#ffffff00" height="519.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="127.0" StackPane.alignment="CENTER_LEFT">
+         <StackPane.margin>
+            <Insets left="-30.0" />
+         </StackPane.margin>
+      </Rectangle>
+      <Label fx:id="score" prefHeight="57.0" prefWidth="500.0" style="-fx-font-size: 40;" styleClass="text" textFill="WHITE" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </StackPane.margin></Label>
+      <Label fx:id="questionNumber" styleClass="text" text="1/20" textFill="WHITE" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </StackPane.margin>
+      </Label>
+      <VBox fx:id="emojiGroup" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" StackPane.alignment="CENTER_LEFT">
+         <children>
+            <Button fx:id="emoji1" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji2" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji3" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji4" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji5" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji6" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/emoji6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="jokerGroup" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="30.0" StackPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="joker1" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#setPointDouble" prefHeight="100.0" prefWidth="100.0" styleClass="transparent-button" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="jokerImage1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/doubleWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="joker2" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#removeOneAnswer" prefHeight="100.0" prefWidth="100.0" styleClass="transparent-button" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="jokerImage2" fitHeight="100.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/removeWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="joker3" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#useTimeJoker" prefHeight="100.0" prefWidth="100.0" styleClass="transparent-button" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="jokerImage3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/timeWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <StackPane.margin>
+            <Insets right="20.0" />
+         </StackPane.margin>
+      </VBox>
+      <Group StackPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image1" fitHeight="250.0" fitWidth="250.0" layoutX="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/happy.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="image2" fitHeight="250.0" fitWidth="250.0" layoutX="850.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/happy.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="738.0" prefWidth="1200.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="250.0" fitWidth="250.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/happy.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="question" alignment="CENTER" contentDisplay="CENTER" maxWidth="1200.0" prefHeight="136.0" prefWidth="1200.0" style="-fx-font-size: 30;" styleClass="text" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox fx:id="MCQuestionGroup" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="answer1" alignment="CENTER" maxHeight="90.0" minHeight="90.0" mnemonicParsing="false" onAction="#sendAnswer" prefHeight="90.0" prefWidth="643.0" style="-fx-font-size: 25; -fx-cursor: hand;" styleClass="answer-button" stylesheets="@stylesheets/stylesheet.css" textAlignment="CENTER" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="answer2" alignment="CENTER" maxHeight="90.0" minHeight="90.0" mnemonicParsing="false" onAction="#sendAnswer" prefHeight="90.0" prefWidth="643.0" style="-fx-font-size: 25; -fx-cursor: hand;" styleClass="answer-button" textAlignment="CENTER" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="answer3" alignment="CENTER" maxHeight="90.0" minHeight="90.0" mnemonicParsing="false" onAction="#sendAnswer" prefHeight="90.0" prefWidth="643.0" style="-fx-font-size: 25; -fx-cursor: hand;" styleClass="answer-button" textAlignment="CENTER" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <StackPane.margin>
+            <Insets top="50.0" />
+         </StackPane.margin>
+      </Group>
+      <Group fx:id="openQuestionGroup" translateY="200.0" StackPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="openAnswer" layoutY="1.0" onKeyPressed="#sendOpenAnswerEnter" prefHeight="125.0" prefWidth="481.0" promptText="Your answer" style="-fx-background-color: white; -fx-border-color: white; -fx-cursor: hand;" stylesheets="@stylesheets/stylesheet.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="username-input" />
+                  <String fx:value="std-button" />
+               </styleClass>
+            </TextField>
+            <Button layoutX="481.0" mnemonicParsing="false" onAction="#sendOpenAnswer" prefHeight="125.0" prefWidth="209.0" style="-fx-border-color: #66e1b0; -fx-background-color: #66e1b0; -fx-cursor: hand;" text="Submit">
+               <styleClass>
+                  <String fx:value="username-submit" />
+                  <String fx:value="std-button" />
+               </styleClass>
+            </Button>
+            <Label fx:id="alert" alignment="CENTER" contentDisplay="CENTER" layoutY="126.0" prefHeight="57.0" prefWidth="690.0" styleClass="text" textFill="RED" />
+         </children>
+      </Group>
+      <Label fx:id="timer" alignment="TOP_CENTER" prefHeight="83.0" prefWidth="1600.0" style="-fx-font-size: 48;" styleClass="text" text="TIME REMAINING:" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <StackPane.margin>
+            <Insets top="20.0" />
+         </StackPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#exitGame" style="-fx-cursor: hand;" styleClass="transparent-button" StackPane.alignment="TOP_RIGHT">
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/log-out.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <StackPane.margin>
+            <Insets right="20.0" top="20.0" />
+         </StackPane.margin>
+      </Button>
+      <StackPane fx:id="emojiFrame" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="200.0" StackPane.alignment="BOTTOM_LEFT">
+         <children>
+            <ImageView fx:id="emojiWindow" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT" />
+         </children>
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" />
+         </StackPane.margin>
+      </StackPane>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</StackPane>

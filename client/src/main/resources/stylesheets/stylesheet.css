@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+.correct-button {
+  -fx-background-color: #66e1b0;
+  -fx-background-radius: 20px;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 20px;
+  -fx-text-fill: #13293D;
+}
+
+.incorrect-button {
+  -fx-background-color: red;
+  -fx-background-radius: 20px;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 20px;
+  -fx-text-fill: #13293D;
+}
+
+.answer-button {
+  -fx-background-color: white;
+  -fx-background-radius: 20px;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 20px;
+  -fx-text-fill: #13293D;
+}
+
+.joker-button {
+  -fx-background-color: transparent;
+  -fx-border-color: white;
+  -fx-border-radius: 10;
+  -fx-border-width: 5;
+}
+
+.transparent-button {
+  -fx-background-color: transparent;
+}
+
+.std-button {
+  -fx-background-color: white;
+  -fx-background-radius: 20px;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 40px;
+  -fx-text-fill: #13293D;
+  -fx-cursor: hand;
+}
+
+.background {
+  -fx-background-image: url('../images/background.png');
+  -fx-background-size: cover;
+}
+
+.text {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 40px;
+}
+
+.title {
+  -fx-font-size: 90px;
+  -fx-text-fill: #66e1b0;
+}
+
+.username-input {
+  -fx-border-radius: 20px 0px 0px 20px;
+  -fx-border-style: solid;
+  -fx-border-width: 6px;
+  -fx-text-fill: #13293D;
+}
+
+.username-submit {
+  -fx-border-radius: 0px 20px 20px 0px;
+  -fx-border-style: solid;
+  -fx-border-width: 6px;
+  -fx-text-fill: #13293D;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+  -fx-background-color: #66e1b0;
+}
+
+.table-view .table-cell {
+  -fx-background-color: white;
+}
+
+.table-row-cell:focused {
+  -fx-text-background-color: black;
+  -fx-font-weight: 700;
+}

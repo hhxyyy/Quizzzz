@@ -1,0 +1,1 @@
+# Add all the folders containing images into here!

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" styleClass="background" stylesheets="@stylesheets/stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.HalftimeController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" StackPane.alignment="CENTER">
+         <children>
+            <Group>
+               <children>
+                  <Line endX="900.60009765625" endY="1.52587890625E-5" layoutX="246.60003662109375" layoutY="2.0" startX="-244.99998474121094" startY="1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="0.3999786376953125" endY="-62.79997253417969" layoutX="1.0" layoutY="66.20001220703125" startX="0.3999786376953125" startY="1.2000274658203125" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="0.3999786376953125" endY="-62.79997253417969" layoutX="1147.0000457763672" layoutY="65.20001220703125" startX="0.3999786376953125" startY="1.2000274658203125" stroke="WHITE" strokeWidth="5.0" />
+               </children>
+            </Group>
+            <Region prefHeight="452.0" prefWidth="1600.0" />
+            <Group>
+               <children>
+                  <Line endX="900.60009765625" endY="1.52587890625E-5" layoutX="246.60003662109375" layoutY="2.0" startX="-244.99998474121094" startY="1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="0.3999786376953125" endY="-62.79997253417969" layoutX="1.0" layoutY="0.20001220703125" startX="0.3999786376953125" startY="1.2000274658203125" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="0.3999786376953125" endY="-62.79997253417969" layoutX="1147.0000457763672" layoutY="0.20001220703125" startX="0.3999786376953125" startY="1.2000274658203125" stroke="WHITE" strokeWidth="5.0" />
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <Text fill="#66e1b0" strokeType="OUTSIDE" strokeWidth="0.0" text="Halftime Leaderboard" textAlignment="CENTER" wrappingWidth="1076.09375" StackPane.alignment="TOP_CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <styleClass>
+            <String fx:value="text" />
+            <String fx:value="title" />
+         </styleClass>
+      </Text>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="SRC_ATOP" fill="#ffffff00" height="538.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="127.0" StackPane.alignment="CENTER_LEFT">
+         <StackPane.margin>
+            <Insets left="-30.0" />
+         </StackPane.margin>
+      </Rectangle>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="542.0" prefWidth="1116.0" style="-fx-background-color: transparent; -fx-background: transparent;" StackPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="554.0" prefWidth="1100.0" spacing="10.0">
+               <children>
+                  <GridPane fx:id="scoreGrid" maxWidth="-Infinity" prefHeight="557.0" prefWidth="1000.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="62.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="656.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <VBox fx:id="emojiGroup" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" StackPane.alignment="CENTER_LEFT">
+         <children>
+            <Button fx:id="emoji1" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji2" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji3" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji4" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji5" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="emoji6" mnemonicParsing="false" onAction="#sendEmoji" prefHeight="75.0" prefWidth="75.0" style="-fx-cursor: hand;" styleClass="transparent-button">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emoji6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#exitGame" style="-fx-background-color: transparent; -fx-cursor: hand;" StackPane.alignment="TOP_RIGHT">
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/log-out.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <StackPane.margin>
+            <Insets right="20.0" top="20.0" />
+         </StackPane.margin>
+      </Button>
+      <ImageView fx:id="emojiWindow" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT" />
+      <Label fx:id="timer" prefWidth="250.0" textFill="WHITE" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
+</StackPane>
